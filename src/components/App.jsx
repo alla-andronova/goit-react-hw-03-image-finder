@@ -43,10 +43,12 @@ class App extends Component {
           reqStatus: 'idle',
         });
 
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: 'smooth',
-        });
+        if (imagePage > 1) {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth',
+          });
+        }
       } catch (error) {
         toast.error('There are not such images');
         this.setState({
